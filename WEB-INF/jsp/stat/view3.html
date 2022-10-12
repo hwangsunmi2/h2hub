@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="수소경제 종합정보포털">
+
+    <meta property="og:title" content="수소경제 종합정보포털" />
+    <meta property="og:url" content="https://h2hub.or.kr" /><!-- 사이트도메인 -->
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="수소경제 종합정보포털" />
+    <meta name="twitter:url" content="https://h2hub.or.kr/" /><!-- 사이트도메인 -->
+    <!-- <meta name="twitter:image" content="/html/images/op_logo.png" />--><!-- 트위터 공유이미지 -->
+    <meta name="twitter:description" content="" />
+
+    <title>수소경제 종합정보포털</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><!-- 파비콘 -->
+    <link rel="canonical" href=""><!-- 대표페이지 정의 -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/js/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/js/plugins/bootstrap-datetimepicker4.css" />
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/js/plugins/aos.css" />
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/css/default.css" />
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/layout.css">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://h2hub.or.kr/assets/publish_raon/css/xeicon.min.css" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+    <!-- js -->
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/jquery.min.js" ></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/jquery.cookie.min.js" ></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/popper.min.js "></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/bootstrap.min.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/bootstrap.modal.remote.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/moment.min.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/bootstrap-datetimepicker.ko.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/bootstrap-datetimepicker.min4.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/swiper.min.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/aos.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/plugins/jquery.scrollbar.js"></script>
+    <script src="https://h2hub.or.kr/assets/publish_raon/js/ui.js?v=202203072100"></script>
+	<script src="../../../assets/js/common.js"></script>
+    <!-- plugins -->
+    <script src="https://h2hub.or.kr/assets/ax5ui/plugins.min.js" ></script>
+    <script src="https://h2hub.or.kr/assets/ax5ui/common.js" ></script>
+    <script src="https://h2hub.or.kr/assets/ax5ui/axboot.config.js" ></script>
+
+    <!-- custom -->
+    <script>
+        window.CONTEXT_PATH = "";
+    </script>
+    <script src="https://h2hub.or.kr/assets/js/cmm/menu.js"></script>
+    <script src="https://h2hub.or.kr/assets/js/cmm/fnUtil.js"></script>
+    <script>
+        
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_01",
+            fnctNm: "수소경제",
+            prefixUrlCn: "/econ/undrs/mn01",
+            fnctUrlCn: "/econ/undrs/mn01/view/pageLoad.do",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_02",
+            fnctNm: "통계정보",
+            prefixUrlCn: "https://h2hub.or.kr/stat/view/pageLoad.do",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100100",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_03",
+            fnctNm: "기술정보",
+            prefixUrlCn: "/tech/trend/mn01",
+            fnctUrlCn: "/tech/trend/mn01/view/pageLoad.do",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_04",
+            fnctNm: "산업동향",
+            prefixUrlCn: "/indst/dmstc/mn01",
+            fnctUrlCn: "/indst/dmstc/mn01/list/pageLoad.do",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_05",
+            fnctNm: "수소전문기업",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/main/main/pageLoad.do",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "",
+            fnctLvl: "1",
+            fnctMenuId: "MNU_06",
+            fnctNm: "알림마당",
+            prefixUrlCn: "/yard/notice",
+            fnctUrlCn: "/yard/notice/list/pageLoad.do",
+            gnbAt: "Y"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_01",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0101",
+            fnctNm: "수소의 이해",
+            prefixUrlCn: "/econ/undrs/mn01",
+            fnctUrlCn: "/econ/undrs/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_01",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0102",
+            fnctNm: "수소경제 소개",
+            prefixUrlCn: "/econ/intro/mn01",
+            fnctUrlCn: "/econ/intro/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_01",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0103",
+            fnctNm: "정책정보",
+            prefixUrlCn: "/econ/policy/mn01",
+            fnctUrlCn: "/econ/policy/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_01",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0104",
+            fnctNm: "법령제도",
+            prefixUrlCn: "/econ/law",
+            fnctUrlCn: "/econ/law/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0101",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010101",
+            fnctNm: "개념",
+            prefixUrlCn: "/econ/undrs/mn01",
+            fnctUrlCn: "/econ/undrs/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0101",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010102",
+            fnctNm: "활용처 및 안전성",
+            prefixUrlCn: "/econ/undrs/mn02",
+            fnctUrlCn: "/econ/undrs/mn02/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0102",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010201",
+            fnctNm: "소개",
+            prefixUrlCn: "/econ/intro/mn01",
+            fnctUrlCn: "/econ/intro/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0102",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010202",
+            fnctNm: "이행 성과",
+            prefixUrlCn: "/econ/intro/mn02",
+            fnctUrlCn: "/econ/intro/mn02/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0103",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010301",
+            fnctNm: "수소경제 정책 현황",
+            prefixUrlCn: "/econ/policy/mn01",
+            fnctUrlCn: "/econ/policy/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0103",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_010302",
+            fnctNm: "정책정보",
+            prefixUrlCn: "/econ/policy/mn02",
+            fnctUrlCn: "/econ/policy/mn02/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_02",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0201",
+            fnctNm: "생산",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=100100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_02",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0202",
+            fnctNm: "유통",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=200100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=200100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_02",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0203",
+            fnctNm: "활용",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_02",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0204",
+            fnctNm: "산업생태계",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=400100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=400100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0201",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020101",
+            fnctNm: "국내 수소 생산량(생산방식별)",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=100100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0201",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020102",
+            fnctNm: "국내 수소 생산량(권역별)",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=100200",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100200",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0201",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020103",
+            fnctNm: "국내 수소 생산량(업종별)",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=100300",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100300",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0201",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020104",
+            fnctNm: "국내 수소 생산기지 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=100400",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=100400",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0202",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020201",
+            fnctNm: "국내 운송설비 현황(권역별)",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=200100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=200100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0202",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020202",
+            fnctNm: "국내 수소 공급량(판매처 업종별)",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=200200",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=200200",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0202",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020203",
+            fnctNm: "국내 상업용 수소충전소 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=200300",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=200300",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0202",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020204",
+            fnctNm: "주요국 수소충전소 구축 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=200400",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=200400",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0203",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020301",
+            fnctNm: "국내 수소모빌리티 보급 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0203",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020302",
+            fnctNm: "주요국 수소모빌리티 보급 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300200",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300200",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0203",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020303",
+            fnctNm: "국내 수소차 수출 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300300",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300300",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0203",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020304",
+            fnctNm: "국내 수소연료전지 보급 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300400",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300400",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0203",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020305",
+            fnctNm: "주요국 수소연료전지 보급 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=300500",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=300500",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0204",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020401",
+            fnctNm: "국내 수소전문기업 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=400100",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=400100",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0204",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_020402",
+            fnctNm: "국내 수소산업 사업체 현황",
+            prefixUrlCn: "/stat/view/pageLoad.do?ctgrySn=400200",
+            fnctUrlCn: "/stat/view/pageLoad.do?ctgrySn=400200",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_03",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0301",
+            fnctNm: "기술동향",
+            prefixUrlCn: "/tech/trend/mn01",
+            fnctUrlCn: "/tech/trend/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_03",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0302",
+            fnctNm: "표준/인증",
+            prefixUrlCn: "/tech/stdCrtf/mn01",
+            fnctUrlCn: "/tech/stdCrtf/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0301",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_030101",
+            fnctNm: "개념",
+            prefixUrlCn: "/tech/trend/mn01",
+            fnctUrlCn: "/tech/trend/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0301",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_030102",
+            fnctNm: "동향정보",
+            prefixUrlCn: "/tech/trend/mn02",
+            fnctUrlCn: "/tech/trend/mn02/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0302",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_030201",
+            fnctNm: "개념",
+            prefixUrlCn: "/tech/stdCrtf/mn01",
+            fnctUrlCn: "/tech/stdCrtf/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0302",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_030202",
+            fnctNm: "동향정보",
+            prefixUrlCn: "/tech/stdCrtf/mn02",
+            fnctUrlCn: "/tech/stdCrtf/mn02/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_04",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0401",
+            fnctNm: "국내",
+            prefixUrlCn: "/indst/dmstc/mn01",
+            fnctUrlCn: "/indst/dmstc/mn01/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_04",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0402",
+            fnctNm: "해외",
+            prefixUrlCn: "/indst/ovrss",
+            fnctUrlCn: "/indst/ovrss/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_04",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0403",
+            fnctNm: "보도자료",
+            prefixUrlCn: "/indst/atc/mn01",
+            fnctUrlCn: "/indst/atc/mn01/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0401",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_040101",
+            fnctNm: "정책동향",
+            prefixUrlCn: "/indst/dmstc/mn01",
+            fnctUrlCn: "/indst/dmstc/mn01/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0401",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_040102",
+            fnctNm: "산업동향",
+            prefixUrlCn: "/indst/dmstc/mn02",
+            fnctUrlCn: "/indst/dmstc/mn02/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0403",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_040301",
+            fnctNm: "자료",
+            prefixUrlCn: "/indst/atc/mn01",
+            fnctUrlCn: "/indst/atc/mn01/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0403",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_040302",
+            fnctNm: "일간 이슈브리핑",
+            prefixUrlCn: "/indst/atc/mn02",
+            fnctUrlCn: "/indst/atc/mn02/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0501",
+            fnctNm: "수소전문기업",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/main/main/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0502",
+            fnctNm: "안내",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/main/intro/entprs/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0503",
+            fnctNm: "수소전문기업 홍보관",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/pr/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0504",
+            fnctNm: "지원사업",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/main/intro/sprbiz/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0505",
+            fnctNm: "수소 혁신 데스크",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/main/intro/desk/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_05",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0505",
+            fnctNm: "소통마당",
+            prefixUrlCn: "-",
+            fnctUrlCn: "https://h2hub.or.kr/hes/qna/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0601",
+            fnctNm: "공지사항",
+            prefixUrlCn: "/yard/notice",
+            fnctUrlCn: "/yard/notice/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0602",
+            fnctNm: "사업공고",
+            prefixUrlCn: "/yard/anc",
+            fnctUrlCn: "/yard/anc/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0603",
+            fnctNm: "홍보자료",
+            prefixUrlCn: "/yard/pr",
+            fnctUrlCn: "/yard/pr/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0604",
+            fnctNm: "국내외 행사정보",
+            prefixUrlCn: "/yard/event",
+            fnctUrlCn: "/yard/event/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0605",
+            fnctNm: "수소관련 세미나 정보",
+            prefixUrlCn: "/yard/seminar",
+            fnctUrlCn: "/yard/seminar/list/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_06",
+            fnctLvl: "2",
+            fnctMenuId: "MNU_0607",
+            fnctNm: "인력양성",
+            prefixUrlCn: "/yard/worker/mn01",
+            fnctUrlCn: "/yard/worker/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0607",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_060701",
+            fnctNm: "수소전문인력정책소개",
+            prefixUrlCn: "/yard/worker/mn01",
+            fnctUrlCn: "/yard/worker/mn01/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0607",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_060702",
+            fnctNm: "수소전문인력정부사업",
+            prefixUrlCn: "/yard/worker/mn02",
+            fnctUrlCn: "/yard/worker/mn02/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+        $menu.prop.totalMenuList.push({
+            prntFnctMenuId: "MNU_0607",
+            fnctLvl: "3",
+            fnctMenuId: "MNU_060703",
+            fnctNm: "H2KOREA인력양성사업단",
+            prefixUrlCn: "/yard/worker/mn03",
+            fnctUrlCn: "/yard/worker/mn03/view/pageLoad.do",
+            gnbAt: "N"
+        });
+        
+    </script>
+</head>
+
+
+<body>
+
+
+<!-- loading -->
+<div id="page_loading">
+    <div id="loading_motion">
+        <p class="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
+    </div>
+</div>
+
+
+<!-- //loading -->
+
+
+
+<div id="Wrap">
+    <!--// header -->
+    
+    
+
+
+
+
+
+
+
+<!-- header -->
+<header id="header">
+    <div class="container">
+        <div class="d-flex">
+
+            <h1><a href="https://h2hub.or.kr/main/pageLoad.do"><img src="https://h2hub.or.kr/assets/publish_raon/img/comm/logo.png" alt="수소경제 종합정보포털"></a></h1>
+            <div class="top_menu side_menu">
+                <form action="https://h2hub.or.kr/cmm/search/pageLoad.do" method="get">
+                    <div class="sch_form">
+                        <input type="text" class="sch_input" name="searchWrd" placeholder="검색어를 입력해주세요!">
+                        <button class="submit"><i class="xi-search"></i></button>
+                    </div>
+                </form>
+                <a href="https://h2hub.or.kr/cmm/siteMap/pageLoad.do" class="a-sm">사이트맵</a>
+            </div>
+        </div>
+    </div>
+    <div id="gnb">
+        <div class="container clearfix">
+            <nav>
+                <ul class="gnb_target">
+
+                </ul>
+            </nav>
+            <div class="bg"></div>
+        </div>
+
+        <!-- 모바일메뉴 토글 -->
+        <div class="burger">
+            <div class="x"></div>
+            <div class="y"></div>
+            <div class="z"></div>
+        </div>
+    </div>
+    <div class="circle"></div>
+
+</header>
+<!-- //header -->
+
+    <!--// header -->
+
+    <!-- 본문 시작 -->
+    <main role="main">
+        <!-- sub_container -->
+        <div id="sub_container" class="container" style="margin-top: 8rem;">
+           
+        	
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/plugins/echarts/v5.2.2/echarts.min.js" ></script>
+<script type="text/javascript" src="/assets/js/stat/stat.Cmmn.js?v=202203072100" ></script>
+<script type="text/javascript" src="/assets/js/stat/stat.Colormap.js?v=202203072100" ></script>
+<script type="text/javascript" src="/assets/js/stat/stat.Option.js?v=202203072100" ></script>
+<script type="text/javascript" src="/assets/js/stat/grid.Option.js?v=202203072100" ></script>
+<script type="text/javascript" src="/assets/js/stat/stat.ctgry.js??v=202203072100" ></script>
+<link rel="stylesheet" type="text/css" href="/assets/jqgrid/js/jquery/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="/assets/jqgrid/js/jquery/ui.jqgrid.css">
+<script type="text/javascript" src="/assets/jqgrid/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/jqgrid/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/assets/jqgrid/js/jquery/grid.locale-en.js"></script>
+<script type="text/javascript" src="/assets/jqgrid/js/jquery/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" src="/assets/jqgrid/js/retrieveGrid.js"></script>
+
+<style>
+    #result{
+        font-family: "Noto Sans KR", sans-serif !important;
+    }
+    #result > tbody > tr > td{
+        font-size: 1.4rem !important;
+    }
+    #content .option_wrap > table > tbody > tr > td {
+        padding: 0.5rem !important;
+    }
+    .form-control{
+        height: 35px !important;
+    }
+    .option_wrap{
+        padding: 1rem !important;
+    }
+    #noData{
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.3rem;
+        height: 100%;
+        display: block;
+        border: 1px solid #a6c9e2;
+        width: 985px;
+    }
+
+    #excel_download {
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 12rem;
+        height: 35px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        color: #fff;
+        background-color: #0066b3;
+        border: 1px solid #0066b3;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #depth3{
+        width: 11% !important;
+    }
+    #depth4{
+        width: 19% !important;
+    }
+    @media (max-width: 991.98px){
+        #depth3, #depth4{
+            width:49.5% !important;
+        }
+    }
+    /*.ui-jqgrid .ui-jqgrid-bdiv {*/
+    /*    overflow-y: scroll !important;*/
+    /*}*/
+</style>
+
+<!-- sub_content -->
+<div class="sub_content data">
+    <!-- 서브 타이틀 -->
+    <div class="sub_title">
+        <h3>통계</h3>
+		<p><i class="xi-home"></i><i class="xi-angle-right"></i> 통계<i class="xi-angle-right"></i> 활용<i class="xi-angle-right"></i> <span>국내 수소차 등록현황</span></p>
+    </div>
+    <!-- //서브 타이틀 -->
+    <!-- 콘텐츠 -->
+    <div id="content" class="statistic_1">
+		
+		<div class="icon_wrap"> 
+			<ul class="data_icon">
+				<li>
+					<a href="../stat/view1.html"><div class="text"><p>생산</p></div></a>
+				</li>
+				<li>
+					<a href="../stat/view2.html"><div class="text"><p>유통</p></div></a>
+				</li>
+				<li class="active">
+					<a href="../stat/view3.html"><div class="text"><p>활용</p></div></a>
+				</li>
+				<li>
+					<a href="../stat/view4.html"><div class="text"><p>산업생태계</p></div></a>
+				</li>
+			</ul>
+		</div>
+	
+		<div class="tab_container">
+		   <!--탭 메뉴 영역 -->
+		  <div class="tabs tab5">
+			<ul>
+			  <li class="active"><a href="#" rel="tab1">국내 수소차 등록현황</a></li>
+			  <li><a href="#" rel="tab2">주요국 수소모빌리티 보급 현황</a></li>
+			  <li><a href="#" rel="tab3">국내 수소차 수출 현황</a></li>
+			  <li><a href="#" rel="tab4">국내 수소연료전지 보급 현황</a></li>
+			  <li><a href="#" rel="tab5">주요국 수소연료전지 보급 현황</a></li>
+			</ul>
+		  </div>
+		  <div id="tab1" class="tab_content">
+
+			<section style="margin-top: 15px;">
+				<div class="surveyYmd top-cont" style="position: relative; height: 30px;">
+					<div id="chart_dan">(단위 : 대)</div>
+					<button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+				</div>
+
+
+				<div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="source"> 출처 : 국토교통부</div>
+
+
+				<div id="stat-body" class="table_ui mt-40" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+		  </div>
+
+		  <div id="tab2" class="tab_content">
+			<section style="margin-top: 15px;">
+				<div class="surveyYmd top-cont" style="position: relative; height: 30px;">
+					<div id="chart_dan">(단위 : 대)</div>
+					<button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+				</div>
+
+
+				<div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="source"> 출처 : 국토교통부 </div>
+
+
+				<div id="stat-body" class="table_ui mt-40" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+		  </div>
+		  <div id="tab3" class="tab_content">
+			<section style="margin-top: 15px;">
+				<div class="surveyYmd top-cont" style="position: relative; height: 30px;">
+					<div id="chart_dan">(단위 : 대)</div>
+					<button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+				</div>
+
+
+				<div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="source"> 출처 : 산업통상자원부 </div>
+
+
+				<div id="stat-body" class="table_ui mt-40" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+		  </div>
+		  <div id="tab4" class="tab_content">
+			<section style="margin-top: 15px;">
+				<div class="surveyYmd top-cont" style="position: relative; height: 30px;">
+					<div id="chart_dan">(단위 : MW)</div>
+					<button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+				</div>
+
+
+				<div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="source"> 출처 : 한국에너지공단 </div>
+
+
+				<div id="stat-body" class="table_ui mt-40" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+		  </div>
+
+		  <div id="tab5" class="tab_content">
+
+			<section style="margin-top: 15px;">
+				<div class="surveyYmd top-cont" style="position: relative; height: 30px;">
+					<div id="chart_dan">(단위 : MW)</div>
+					<button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+				</div>
+
+
+				<div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="source"> 출처 : 한국(한국에너지공단),일본(코제네재단),미국(에너지부) </div>
+
+
+				<div id="stat-body" class="table_ui mt-40" style="margin-bottom: 15px !important;">
+					
+					<div>
+						<h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+						<div class="text-right" id="unit"></div>
+						<div id="stat-chart" class="tb_1"></div>
+
+						<div id="commingSoon" style="display: none; position: relative;">
+							<div style="width: 100%; margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+								<img src="/assets/publish/images/ico_ready.png">
+								<div class="inner" style="margin: 0 auto;">
+									<p style="text-align: center;">현재 페이지는 준비중입니다.<br>
+										빠른시일내에 서비스를 제공할 수 있도록 노력하겠습니다.<br>
+										감사합니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+		  </div>
+		   <!--//탭 메뉴 영역 -->
+		</div>
+
+
+        <section>
+
+            <div>
+                <div style="position: relative; text-align: right;" id="grid_dan"></div>
+                
+
+
+
+
+
+
+
+
+
+			<style>
+				.tb_1 tbody tr > td:last-child, .tb_1 thead tr > th:last-child {
+					border-right: 1px solid #b8bdc5;
+				}
+
+				.tb_1 {
+					margin-top: 24px;
+				}
+
+				.text-right {
+					text-align: right !important;
+				}
+
+				#stat-table {
+					display: none;
+				}
+
+				#stat-chart {
+					display: block;
+					width: 100%;
+					height: 350px;
+				}
+				#stat-body {
+					border: solid 1px #ddd;
+					margin-bottom: 50px;
+				}
+			</style>
+
+
+			<!-- sub_content -->
+
+			<script type="text/javascript" src="https://h2hub.or.kr/assets/js/stat/stat.Cmmn.js?v=202203072100" ></script>
+			<script type="text/javascript" src="https://h2hub.or.kr/assets/js/stat/stat.Topic.js?v=202203072100" ></script>
+			<script type="text/javascript">
+				stat.Cmmn.CONTEXTPATH = "";
+				new window.stat.Topic();
+
+				const ctgrySn = "100100";
+				let param={
+					ctgry: $("#depth3").val(),
+					value: $("#depth4").val(),
+				};
+
+				$("#startDate").val(oneYearAgo());
+				$("#endDate").val(today());
+
+				$("#depth3").html(depth_ctgry(ctgrySn));
+
+				//페이지 첫 로드 시 CTGRY_SN 값으로 그래프 출력
+				getStatData(ctgrySn, oneYearAgo(),today(), param);
+						console.log(param);
+				if(!(ctgrySn==='200300' || ctgrySn==='400100')){
+					$("#depth3").css('display','none');
+					$("#depth4").css('display','none');
+				}
+
+				var ctgryList ="";
+				var optionList ="";
+
+				renderUnit(ctgrySn);
+
+				//페이지 첫 로드시 검색박스 선택
+				for(i of menuByLvl){
+					if(i.ctgryId ==="100100".slice(0,3)) ctgryList += '<option value="'+i.ctgryId+'" selected>'+i.ctgryNm+'</option>';
+					else ctgryList += '<option value="'+i.ctgryId+'">'+i.ctgryNm+'</option>';
+				}
+
+				for(i of menuByLv2){
+					if(i.ctgrySn.slice(0,3) ==="100100".slice(0,3)) {
+						if(i.ctgrySn==="100100") {
+							$("#SPC").val(i.period);
+							optionList += '<option value="'+i.ctgrySn+'" id="'+i.id+'" selected>'+i.ctgryNm+'</option>';
+						}else optionList += '<option value="'+i.ctgrySn+'" id="'+i.id+'">'+i.ctgryNm+'</option>';
+					}
+				}
+
+				$("#depth1").html(ctgryList);
+				$("#depth2").html(optionList);
+
+			//SPC001 1개월 주기
+			//SPC002 분기
+			//SPC003 1년주기
+				$("#depth1").on("change",function(){
+					if($("#depth1").val()==="100") {
+						var optionList = '<option selected>선택</option>'+
+							'<option value="100100" id="SPC003">국내 수소 생산량(생산방식별)</option>' +
+							'<option value="100200" id="SPC003">국내 수소 생산량(권역별)</option>' +
+							'<option value="100300" id="SPC003">국내 수소 생산량(업종별)</option>' +
+							'<option value="100400" id="SPC003">국내 수소 생산기지 현황</option>'
+						$("#depth2").html(optionList);
+
+					}
+					else if ($("#depth1").val()==="200"){
+						var optionList = '<option selected>선택</option>'+
+							'<option value="200100" id="SPC003">국내 운송설비 현황</option>' +
+							'<option value="200200" id="SPC003">국내 수소 공급량(판매처 업종별)</option>'+
+							'<option value="200300" id="SPC001">국내 상업용 수소충전소 현황</option>' +
+							'<option value="200400" id="SPC001">주요국 수소충전소 구축 현황</option>'
+						$("#depth2").html(optionList);
+					}
+					else if ($("#depth1").val()==="300"){
+						var optionList = '<option selected>선택</option>'+
+							'<option value="300100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+							'<option value="300200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+							'<option value="300300" id="SPC003">국내 수소차 수출 현황</option>' +
+							'<option value="300400" id="SPC003">국내 수소연료전지 보급 현황</option>' +
+							'<option value="300500" id="SPC003">주요국 수소연료전지 보급 현황</option>'
+						$("#depth2").html(optionList);
+					}
+					else if ($("#depth1").val()==="400"){
+						var optionList = '<option selected>선택</option>'+
+							'<option value="400100" id="SPC001">국내 수소전문기업 현황</option>' +
+							'<option value="400200" id="SPC003">국내 수소산업 사업체 현황</option>'
+						$("#depth2").html(optionList);
+					}
+					else if ($("#depth1").val()==="500"){
+						var optionList = '<option selected>선택</option>'+
+							'<option value="500100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+							'<option value="500200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+							'<option value="500300" id="SPC003">국내 수소차 수출 현황</option>'
+						$("#depth2").html(optionList);
+					}
+					else if ($("#depth1").val()==="600"){
+						var optionList = '<option selected>선택</option>'+
+							'<option value="500100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+							'<option value="500200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+							'<option value="500300" id="SPC003">국내 수소차 수출 현황</option>'
+							'<option value="600100" id="SPC003">국내 수소연료전지 보급 현황</option>' +
+							'<option value="600200" id="SPC003">주요국 수소연료전지 보급 현황</option>'
+						$("#depth2").html(optionList);
+					}else if ($("#depth1").val()==="1"){
+						var optionList = '<option value="">선택</option>'
+						$("#depth2").html(optionList);
+					}
+				});
+
+				$("#depth2").on("change",function(){
+					var id = $("#depth2 option:selected").attr("id");
+					// alert(id);
+					$("#depth3").html(depth_ctgry($(this).val()));
+					let period = "";
+					switch (id) {
+
+						case "SPC001":
+							period = "개월 단위";
+							break;
+						case "SPC002":
+							period = "분기 단위";
+							break;
+						case "SPC003":
+							period = "년 단위";
+							break;
+					}//switch end
+					$("#SPC").val(period);
+					if($(this).val()==='200300' || $(this).val()==='400100'){
+						$("#depth3").css('display','inline-block');
+						$("#depth4").css('display','inline-block');
+
+					}else{
+						$("#depth3").css('display','none');
+						$("#depth4").css('display','none');
+
+					}
+
+				});
+			//depth4_fndnYr
+				$("#depth3").on("change",function(){
+					if($(this).val()!==""){
+						$("#depth4").html(depth4_html($(this).val()));
+					}else{
+						$("#depth4").html('<option value="" selected>선택</option>');
+					}
+				})
+
+
+
+				function search(){
+
+					var ctgrySn = $("#depth2").val();
+					var pstgBgngYmd = $("#startDate").val();
+					var pstgEndYmd =   $("#endDate").val();
+					var param = {
+						ctgry: $("#depth3").val(),
+						value: $("#depth4").val(),
+					};
+					if(!pstgBgngYmd || !pstgEndYmd){
+						alert("검색할 기간을 선택해 주세요.");
+						return false;
+					}
+
+					getStatData(ctgrySn, pstgBgngYmd, pstgEndYmd, param);
+					renderUnit(ctgrySn);
+				}
+
+				function getStatData(ctgrySn, startDate, endDate, param){
+					$.ajax({
+						type:"GET",
+						url: stat.Cmmn.CONTEXTPATH+"/stat/view/gridLoad.do",
+						dataType: "json",
+						async: false,
+						data:{
+							"ctgrySn" : ctgrySn,
+							"pstgBgngYmd" : startDate,
+							"pstgEndYmd" : endDate
+						},
+						success : function (result){
+							drawChart(ctgrySn,param,result.data);
+							GridControl.clearGridData();
+							drawGrid(ctgrySn,param,result.data);
+
+						}
+					});
+				}
+
+				function download(){
+					let url = 'ctgrySn='+ $("#depth2").val()+'&pstgBgngYmd='+$("#startDate").val()+
+							'&pstgEndYmd='+$("#endDate").val()+'&searchKey='+$("#depth3").val()+'&searchValue='+$("#depth4").val();
+
+					window.open(CONTEXT_PATH + "/stat/excelDownload.do?"+url);
+				}
+
+				function today(){
+					var today = new Date();
+					var year = today.getFullYear();
+					var month = ('0' + (today.getMonth() + 1)).slice(-2);
+					var day = ('0' + today.getDate()).slice(-2);
+					var dateString = year + '-' + month  + '-' + day;
+					return dateString;
+				}
+
+				function oneYearAgo(){
+					var today = new Date();
+					var year = today.getFullYear()-1;
+					var month = ('0' + (today.getMonth() + 1)).slice(-2);
+					var day = ('0' + today.getDate()).slice(-2);
+					var dateString = year + '-' + month  + '-' + day;
+					return dateString;
+				}
+
+				function renderUnit(ctgrySn) {
+					const surveyYmdTag = document.getElementById("surveyYmd");
+					const chartDanTag = document.getElementById("chart_dan");
+					const gridDanTag = document.getElementById("grid_dan");
+					const sourceTag = document.getElementById("source");
+					sourceTag.style.display="block";
+
+					switch (ctgrySn){
+						case "100100":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : ton)";
+							gridDanTag.innerHTML ="(단위 : ton)";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "100200":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : ton)";
+							gridDanTag.innerHTML ="(단위 : ton)";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "100300":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : ton)";
+							gridDanTag.innerHTML ="(단위 : ton)";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "200100":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : 대)";
+							gridDanTag.innerHTML ="(단위 : km, 대)";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "200200":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : ton)";
+							gridDanTag.innerHTML ="(단위 : ton)";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "200300":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : 충전소 수)";
+							gridDanTag.innerHTML ="";
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "200400":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : 기)";
+							gridDanTag.innerHTML ="(단위 : 기)";
+							sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+							break;
+						case "100400":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML ="(단위 : 충전소 수)";
+							gridDanTag.innerHTML ="";
+							sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+							break;
+						case "300100":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : 대)"
+							gridDanTag.innerHTML ="(단위 : 대)"
+							sourceTag.innerHTML = "출처 : 국토교통부";
+							break;
+						case "300200":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : 대)"
+							gridDanTag.innerHTML ="(단위 : 대)"
+							sourceTag.innerHTML = "출처 : 국토교통부";
+							break;
+						case "300300":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : 대)"
+							gridDanTag.innerHTML ="(단위 : 대)"
+							sourceTag.innerHTML = "출처 : 산업통상자원부";
+							break;
+						case "300400":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : MW)"
+							gridDanTag.innerHTML = "(단위 : MW)"
+							sourceTag.innerHTML = "출처 : 한국에너지공단";
+							break;
+						case "300500":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : MW)"
+							gridDanTag.innerHTML = "(단위 : MW)"
+							sourceTag.innerHTML = "출처 : 한국(한국에너지공단),일본(코제네재단),미국(에너지부)";
+							break;
+						case "400100":
+							surveyYmdTag.innerHTML = "조사 시점 : 2022. 02";
+							chartDanTag.innerHTML = "(단위 : 전문기업 수)"
+							gridDanTag.innerHTML = ""
+							sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+							break;
+						case "400200":
+							surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+							chartDanTag.innerHTML = "(단위 : %)"
+							gridDanTag.innerHTML = "(단위 : %, 백만원, 명)"
+							sourceTag.innerHTML = "출처 : 수소융합얼라이언스";
+							break;
+						default:
+							surveyYmdTag.innerHTML = "";
+							chartDanTag.innerHTML = "";
+							gridDanTag.innerHTML ="";
+							sourceTag.style.display="none";
+							break;
+					}
+
+				}
+
+			</script>
+
+        </div>
+        <!-- //sub_container -->
+    </main>
+    <!-- //본문 끝 -->
+
+    <!-- footer -->
+    
+    
+
+
+
+
+
+
+
+<!-- 푸터 시작 -->
+<footer id="footer">
+    <div class="container">
+        <div class="f_nav">
+            <div class="d-lg-flex">
+                <div class="logo">
+                    <h1><img src="https://h2hub.or.kr/assets/publish_raon/img/comm/logo_f.jpg" alt=""></h1>
+                    <ul class="list-unstyled">
+                        <li><a href="/cmm/intro/pageLoad.do">포털 소개</a></li>
+                        <li><a href="/terms/legal/pageLoad.do">법적근거</a></li>
+                        <li><a href="/terms/privacy/pageLoad.do">개인정보 취급방침</a></li>
+                        <li><a href="/terms/copyright/pageLoad.do">이용약관</a></li>
+                        <li><a href="/terms/condition/pageLoad.do">저작권 정책</a></li>
+                        <li><a href="javascript:openLayer();" >이메일 무단수집거부안내</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap">
+                    <div class="sitemap_div">
+                        <p class="trigger">관련사이트 바로가기 <i class="xi-plus"></i></p>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.motie.go.kr/www/main.do" target="_blank" title="새창열기">산업통상자원부</a></li>
+                            <li><a href="https://www.kogas.or.kr:9450/portal/index.do" target="_blank" title="새창열기">한국가스공사</a></li>
+                            <li><a href="https://www.kgs.or.kr/" target="_blank" title="새창열기">한국가스안전공사</a></li>
+                            <li><a href="http://h2korea.or.kr/" target="_blank" title="새창열기">수소융합얼라이언스</a></li>
+                            <li><a href="https://www.h2hub.or.kr/hes/" target="_blank" title="새창열기">수소전문기업</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f_info">
+            <div class="d-lg-flex">
+                <div class="addr">
+                    <address>
+                        <p>서울특별시 서초구 반포대로 34 로얄빌딩 4,5층 H2KOREA (수소융합얼라이언스)</p>
+                        <ul class="list-unstyled">
+                            <li><span>TEL.</span> 02-6258-7450</li>
+                            <li><span>FAX.</span> 02-6258-7451</li>
+                            <li><span>EMAIL.</span> support@h2korea.or.kr</li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="copy">
+                    <p>Copyrightⓒ 2021 H2KOREA. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-top"><div><i class="xi-angle-up-min"></i> TOP</div></div>
+</footer>
+<!-- //푸터 끝 -->
+
+
+<div class="popup POP_EMAIL_NO" id="pop-email-no" style="display: none;">
+    <div class="pop_header">
+        <h1 class="ellipsis">이메일주소 무단수집 거부</h1>
+        <button type="button" class="close">닫기</button>
+    </div>
+
+    <div class="pop_container">
+        <div class="pop_cont">
+            <!-- 컨텐츠영역 -->
+            <p class="msg">
+                본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며 이를 위반시 정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
+            </p>
+
+            <!-- <p class="msg2">본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며 이를 위반시 정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.</p> -->
+            <!--// 컨텐츠영역 -->
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        layerPop.init();
+        // Layer popup
+    })
+
+    var layerPop = {
+        init: function() {
+            this.$target = $('.popup');
+            this.$close = this.$target.find('.pop_header .close');
+            this.addEvent();
+        },
+        open: function(id) {
+            $('#' + id).before('<div class="pop_dim"></div>');
+            $('#' + id).show();
+            $('body').css('overflow', 'hidden');
+        },
+        close: function(id) {
+            $('#' + id).hide();
+            $('#' + id).prev('.pop_dim').remove();
+            $('body').css('overflow', 'visible');
+        },
+        addEvent: function() {
+            // popup close
+            this.$close.on('click', function(e) {
+                e.preventDefault();
+                $(this).parents('.popup').hide();
+                $(this).parents('.popup').prev('.pop_dim').remove();
+                $('body').css('overflow', 'visible');
+            });
+        }
+    }
+
+    function loginPage(){
+        window.location.href="/login/login/pageLoad.do";
+    }
+
+    function joinPage(){
+        window.location.href="/join/step01/pageLoad.do";
+    }
+
+    // 팝업호출
+    function openLayer(){
+        layerPop.open('pop-email-no');    //popup ID
+    }
+
+</script>
+
+<style>
+    /* Popup */
+    .pop_dim {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.6); z-index: 99;}
+    .popup {display: none; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 99;}
+    .popup.basic {width: 400px;}
+
+    .pop_header {position: relative; height: 90px; border-radius: 17px 17px 0 0; background: #008cd6;}
+    .pop_header h1 {height: 90px; padding: 0 90px 0 39px; color: #fff; font-size: 24px; font-weight: 700; line-height: 90px;}
+    .pop_header .close {display: block; position: absolute; right: 39px; top: 30px; width: 30px; height: 30px; font-size: 0; background: url(/assets/publish/images/ico_close_pop.png) no-repeat;}
+    .pop_container {padding: 40px; border-radius: 0 0 17px 17px; background: #fff;}
+    .pop_footer {margin-top: 30px;}
+
+    .POP_EMAIL_NO {width: 580px;}
+    .POP_EMAIL_NO .msg {padding-top: 102px; color: #222; font-size: 16px; font-size: 300; text-align: center; background: url(/assets/publish/images/ico_warn2.png) no-repeat center top;}
+    .POP_EMAIL_NO .msg strong {color: #008cd6;}
+    .POP_EMAIL_NO .msg2 {margin-top: 24px; padding: 24px; border-radius: 10px; color: #222; font-size: 16px; font-weight: 300; background: #eee; letter-spacing: -1px; word-break: break-all;}
+
+    .txt_top {padding-bottom: 15px; border-bottom: 2px solid #28303c; color: #222; font-size: 18px; font-weight: 500;}
+</style>
+    <!-- footer -->
+</div>
+
+</body>
+</html>

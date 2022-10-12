@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수소경제 종합정보포털</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/jquery.fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/swiper.min.css" />
+
+    <script src="../../../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../../../assets/js/jquery.fullpage.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    <script src="../../../assets/js/common.js"></script>
+    <script src="../../../assets/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="skipNavigation" title="스킵내비게이션">
+        <a href="#gnb" class="">주 메뉴 바로가기 </a>
+        <a href="#contents" class=""> 본문 내용 바로가기 </a>
+      </div>
+      <!-- start : header -->
+      <div class="header">
+        <div class="header__inner">
+          <div class="headerTop row">
+            <div class="headerTop__inner">
+              <a href="javascript:void(0);">수소경제종합정보포털</a>
+              <a href="javascript:void(0);">수소전문기업</a>
+              <a href="javascript:void(0);">수소융합얼라이언스</a>
+            </div>
+          </div>
+          <div class="headerBottom row">
+            <div class="headerBottom__inner">
+              <h1>
+                <a href="javascript:void(0);"></a>
+              </h1>
+              <div class="gnbWrap">
+                <ul class="gnb row">
+                  <li>
+                    <a href="javascript:void(0)">수소경제</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">수소의 이해</a></li>
+                      <li><a href="javascript:void(0)">수소경제 소개</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">통계</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">생산</a></li>
+                      <li><a href="javascript:void(0)">유통</a></li>
+                      <li><a href="javascript:void(0)">활용</a></li>
+                      <li><a href="javascript:void(0)">산업생태계</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">정보공간</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">법령정보</a></li>
+                      <li><a href="javascript:void(0)">정책/산업/기술정보</a></li>
+                      <li><a href="javascript:void(0)">규제개선</a></li>
+                      <li><a href="javascript:void(0)">인력양성</a></li>
+                      <li><a href="javascript:void(0)">수소전문기업</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">알림공간</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">공지사항</a></li>
+                      <li><a href="javascript:void(0)">보도자료</a></li>
+                      <li><a href="javascript:void(0)">사업공고</a></li>
+                      <li><a href="javascript:void(0)">행사정보</a></li>
+                      <li><a href="javascript:void(0)">채용정보</a></li>
+                      <li><a href="javascript:void(0)">홍보자료</a></li>
+                      <li><a href="javascript:void(0)">정기간행물</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <ul class="tnb">
+                <li class="etc">
+                  <a class="main_search" href="https://h2hub.or.kr/cmm/search/pageLoad.do?searchWrd=">검색</a>
+                  <a class="main_sitemap" href="https://h2hub.or.kr/cmm/siteMap/pageLoad.do">전체메뉴 열기</a>
+				  <a class="m_sitemap" href="javascript:void(0);">전체메뉴 열기</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	  <!-- start : mobileMenu -->
+	  <div class="mMenu">
+		<div class="topBlue">
+			<div class="mtop">
+				<a class="nav-link" href="../../../WEB-INF/jsp/main/main.html"  title="새창 열림">
+					<img src="../../../assets/img/common/logo.png" alt="수소경제종합정보포털">
+				</a>
+				<div class="button_container active">
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
+
+			</div>
+			<div class="mbottom">
+				<ul class="row">
+				  <li><a href="javascript:void(0);">수소경제종합정보포털</a></li>
+				  <li><a href="javascript:void(0);">수소전문기업</a></li>
+				  <li><a href="javascript:void(0);">수소융합얼라이언스</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="overlay open" id="overlay">
+			<div class="overlayBox">
+				<div class="overlay-menu">
+					<ul class="row">
+						<li>
+							<a href="javascript:void(0)" target="_self" title="" class="">수소경제</a>
+							<ul class="depth2">
+								<li><a href="javascript:void(0)">수소의 이해</a></li>
+								<li><a href="javascript:void(0)">수소경제 소개</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" target="_self" title="" class="">통계</a>
+							<ul class="depth2">
+								<li><a href="javascript:void(0)">생산</a></li>
+							    <li><a href="javascript:void(0)">유통</a></li>
+							    <li><a href="javascript:void(0)">활용</a></li>
+							    <li><a href="javascript:void(0)">산업생태계</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" target="_self" title="" class="">정보공간</a>
+							<ul class="depth2">
+								<li><a href="javascript:void(0)">법령정보</a></li>
+							    <li><a href="javascript:void(0)">정책/산업/기술정보 </a></li>
+							    <li><a href="javascript:void(0)">규제개선</a></li>
+							    <li><a href="javascript:void(0)">인력양성</a></li>
+							    <li><a href="javascript:void(0)">수소전문기업</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" target="_self" title="" class="">알림공간</a>
+								<ul class="depth2">
+									<li><a href="javascript:void(0)">공지사항</a></li>
+								  <li><a href="javascript:void(0)">보도자료</a></li>
+								  <li><a href="javascript:void(0)">사업공고</a></li>
+								  <li><a href="javascript:void(0)">행사정보</a></li>
+								  <li><a href="javascript:void(0)">채용정보</a></li>
+								  <li><a href="javascript:void(0)">홍보자료</a></li>
+								  <li><a href="javascript:void(0)">정기간행물</a></li>
+								</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <!-- end : mobileMenu -->
+
+      <!-- end : header -->
+
+      <!-- start : fullpage -->
+      <div id="fullpage">
+        <div class="section first" id="section1">
+          <div class="slide_wrap" id="contents">
+            <div class="suso_main1">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide first_slide">
+                    <div class="inner_1400">
+                      <div class="box">
+                        <p class="title"><span>수소,</span> 대한민국이 주도하는</p>
+                        <div class="box_txt">
+                          <p>첫 번째 에너지</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide second_slide">
+                    <div class="inner_1400">
+                      <div class="box">
+                        <p class="title"><span>수소,</span> 대한민국이 주도하는</p>
+                        <div class="box_txt">
+                          <p>첫 번째 에너지</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide third_slide">
+                    <div class="inner_1400">
+                      <div class="box">
+                        <p class="title"><span>수소,</span> 대한민국이 주도하는</p>
+                        <div class="box_txt">
+                          <p>첫 번째 에너지</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /swiper-wrapper  -->
+
+                <div class="page_inner">
+                  <!-- Add fraction -->
+                  <div class="swiper-pagination pagination_fraction number"></div>
+                  <!-- Add bullet -->
+                  <div class="swiper-pagination pagination_bullet"></div>
+                  <div class="swiper-button-pause"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//slide_wrap-->
+
+          <div class="mouse-container">
+            <div class="scroll">Scroll</div>
+            <p>
+				<div class="arrow arrow-first"></div>
+			</p>
+          </div>
+        </div>
+        <!-- //section first -->
+
+        <div class="section second" id="section2">
+          <div class="suso_main2">
+            <div class="mainTitle">
+              <div class="">
+                <p>주요 콘텐츠</p>
+              </div>
+            </div>
+            <div class="inner_1400">
+              <div class="swiper secondSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">일간 이슈브리핑<br />신청</p>
+                      <p class="txt">수소산업의 종합정보 이슈<br />브리핑을 신청하세요.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">수소충전소<br />현황</p>
+                      <p class="txt">국내 수소충전소 위치정보<br />시스템을 확인하세요.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">수소안전</p>
+                      <p class="txt">수소안전관리에 대하여<br/>확인하세요.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">홍보자료</p>
+                      <p class="txt">수소경제 종합정보포털의<br />홍보자료입니다.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">수소전문기업<br />안내</p>
+                      <p class="txt">수소전문기업으로 선정한<br />기업을 소개합니다.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="text">
+                      <p class="tit">통계</p>
+                      <p class="txt">국내 수소전문기업 현황</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+         <div class="mouse-container">
+            <div class="scroll">Scroll</div>
+            <p>
+				<div class="arrow arrow-first"></div>
+			</p>
+          </div>
+        </div>
+        <!-- //section second -->
+
+        <div class="section third" id="section3">
+          <div class="suso_main3">
+            <div class="mainTitle">
+              <div class="">
+                <p>수소 통계</p>
+              </div>
+            </div>
+            <div class="elem-statistics row">
+              <div class="elem-statistics__inner">
+                <div class="elem-statistics__cont hover">
+                  <div class="cont">
+                    <div class="title">
+                      <p class="top">생산</p>
+                      <p class="bottom">국내 수소 생산량 (생산방식별)</p>
+                    </div>
+                    <div class="total">
+                      <span class="count_num">2,339,620</span>
+                      <em>ton</em>
+                    </div>
+                    <a class="more" href="javascript:void(0);">
+                      <img src="../../../assets/img/main/icon_plus.png" alt="생산 바로가기 아이콘" />
+                    </a>
+                  </div>
+                </div>
+                <div class="elem-statistics__cont">
+                  <div class="cont">
+                    <div class="title">
+                      <p class="top">유통</p>
+                      <p class="bottom">국내 상업용 수소충전소 구축 현황</p>
+                    </div>
+                    <div class="total">
+                      <span class="count_num2">103</span>
+                      <em>개</em>
+                    </div>
+                    <a class="more" href="javascript:void(0);">
+                      <img src="../../../assets/img/main/icon_plus.png" alt="유통 바로가기 아이콘" />
+                    </a>
+                  </div>
+                </div>
+                <div class="elem-statistics__cont">
+                  <div class="cont">
+                    <div class="title">
+                      <p class="top">활용</p>
+                      <p class="bottom">국내 수소차 등록현황</p>
+                    </div>
+                    <div class="total">
+                      <span class="count_num3">19,404</span>
+                      <em>대</em>
+                    </div>
+                    <a class="more" href="javascript:void(0);">
+                      <img src="../../../assets/img/main/icon_plus.png" alt="활용 바로가기 아이콘" />
+                    </a>
+                  </div>
+                </div>
+                <div class="elem-statistics__cont">
+                  <div class="cont">
+                    <div class="title">
+                      <p class="top">산업생태계</p>
+                      <p class="bottom">국내 수소전문기업 현황</p>
+                    </div>
+                    <div class="total">
+                      <span class="count_num4">32</span>
+                      <em>개</em>
+                    </div>
+                    <a class="more" href="javascript:void(0);">
+                      <img src="../../../assets/img/main/icon_plus.png" alt="산업생태계 바로가기 아이콘" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class="mouse-container black-arrow">
+            <div class="scroll">Scroll</div>
+            <p>
+				<div class="arrow arrow-first"></div>
+			</p>
+          </div>
+        </div>
+        <!-- //section third -->
+
+        <div class="section fourth" id="section4">
+          <div class="cont_wrap">
+            <div class="tab_wrap inner_1400">
+              <h3 id="tab_1" class="tab_btn03 on"><a class="tab" href="#list_1">사업공고</a></h3>
+              <div id="list_1" class="tab_cont on">
+                <ul class="row">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 탄소중립 신산업 전환 지원사업 시행계획 공고</strong>
+                      <p>탄소중립 신산업 전환을 선도하는 혁신 주체를 발굴·육성하기 위한 「2022년...</p>
+                      <em>2021.08.01</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>새만금 신항만의 수소에너지 기반 시설 구축방안 연구용역</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                </ul>
+                <a class="more" href="javascript:void(0)"><img src="../../../assets/img/main/icon_plus_b.png" alt="사업공고 더보기" /></a>
+              </div>
+
+              <h3 id="tab_2" class="tab_btn03"><a class="tab" href="#list_2">보도자료</a></h3>
+              <div id="list_2" class="tab_cont">
+                <ul class="row">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>새만금 신항만의 수소에너지 기반 시설 구축방안 연구용역</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 탄소중립 신산업 전환 지원사업 시행계획 공고</strong>
+                      <p>탄소중립 신산업 전환을 선도하는 혁신 주체를 발굴·육성하기 위한 「2022년...</p>
+                      <em>2021.08.01</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                </ul>
+                <a class="more" href="javascript:void(0)"><img src="../../../assets/img/main/icon_plus_b.png" alt="보도자료 더보기" /></a>
+              </div>
+              <h3 id="tab_3" class="tab_btn03"><a class="tab" href="#list_3">정기간행물</a></h3>
+              <div id="list_3" class="tab_cont">
+                <ul class="row">
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 탄소중립 신산업 전환 지원사업 시행계획 공고</strong>
+                      <p>탄소중립 신산업 전환을 선도하는 혁신 주체를 발굴·육성하기 위한 「2022년...</p>
+                      <em>2021.08.01</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>새만금 신항만의 수소에너지 기반 시설 구축방안 연구용역</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">
+                      <strong>2022년도 소재부품장비 글로벌 기술협력 거점 입주기업 선발...</strong>
+                      <p>우수한 R&D역량과 기술인력을 보유한 독일의 연구기관, 대학, 기업 등과 기...</p>
+                      <em>2021.08.08</em>
+                    </a>
+                  </li>
+                </ul>
+                <a class="more" href="javascript:void(0)"><img src="../../../assets/img/main/icon_plus_b.png" alt="정기간행물 더보기" /></a>
+              </div>
+            </div>
+            <div class="elem-familySite">
+              <div class="elem-familySite__inner">
+                <div class="elem-familySite__item">
+                  <img src="../../../assets/img/main/img-familySite--01.jpg" alt="산업통상자원부" />
+                </div>
+                <div class="elem-familySite__item">
+                  <img src="../../../assets/img/main/img-familySite--02.jpg" alt="H2KOREA 수소융합얼라이언스" />
+                </div>
+                <div class="elem-familySite__item">
+                  <img src="../../../assets/img/main/img-familySite--03.jpg" alt="수소유통전담기관 수소유통정보시스템" />
+                </div>
+                <div class="elem-familySite__item">
+                  <img src="../../../assets/img/main/img-familySite--04.jpg" alt="한국가스공사" />
+                </div>
+                <div class="elem-familySite__item">
+                  <img src="../../../assets/img/main/img-familySite--05.jpg" alt="한국가스안전공사" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- footer -->
+          <footer id="footer" class="footer">
+            <div class="container inner_1400">
+              <div class="f_nav">
+                <div class="row">
+                  <div class="logo">
+                    <ul class="list-unstyled row">
+                      <li><a href="/terms/legal/pageLoad.do">법적근거</a></li>
+                      <li><a href="/terms/privacy/pageLoad.do">개인정보 취급방침</a></li>
+                      <li><a href="/terms/copyright/pageLoad.do">이용약관</a></li>
+                      <li><a href="/terms/condition/pageLoad.do">저작권 정책</a></li>
+                      <li><a href="javascript:openLayer();">이메일 무단수집거부안내</a></li>
+                    </ul>
+                  </div>
+                  <div class="sitemap">
+                    <div class="sitemap_div">
+                      <p class="trigger">관련사이트 바로가기 <i class="arrow"></i></p>
+                      <ul class="list-unstyled" style="display: none">
+                        <li><a href="http://www.motie.go.kr/www/main.do" target="_blank" title="새창열기">산업통상자원부</a></li>
+                        <li><a href="https://www.kogas.or.kr:9450/portal/index.do" target="_blank" title="새창열기">한국가스공사</a></li>
+                        <li><a href="https://www.kgs.or.kr/" target="_blank" title="새창열기">한국가스안전공사</a></li>
+                        <li><a href="http://h2korea.or.kr/" target="_blank" title="새창열기">수소융합얼라이언스</a></li>
+                        <li><a href="https://www.h2hub.or.kr/hes/" target="_blank" title="새창열기">수소전문기업</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="f_info">
+                <div class="row">
+                  <h1 class="footerLogo">
+                    <a href="javascript:void(0);"></a>
+                  </h1>
+                  <div class="addr">
+                    <address>
+                      <p>서울특별시 서초구 반포대로 34 로얄빌딩 4,5층 H2KOREA (수소융합얼라이언스)</p>
+                      <ul class="list-unstyled row">
+                        <li><span>TEL.</span> 02-6258-7450</li>
+                        <li><span>FAX.</span> 02-6258-7451</li>
+                        <li><span>EMAIL.</span> support@h2korea.or.kr</li>
+                      </ul>
+                      <p>Copyrightⓒ 2021 H2KOREA. All Rights Reserved</p>
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- //footer -->
+        </div>
+        <!-- //section fourth -->
+      </div>
+      <!-- end : fullpage -->
+    </div>
+  </body>
+</html>

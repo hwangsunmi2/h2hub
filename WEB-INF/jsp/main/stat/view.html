@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수소경제 종합정보포털</title>
+
+<link rel="stylesheet" type="text/css" href="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/ui.jqgrid.css">    
+
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/plugins/echarts/v5.2.2/echarts.min.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.Cmmn.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.Colormap.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.Option.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/grid.Option.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.ctgry.js" ></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/grid.locale-en.js"></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/jqgrid/js/jquery/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" src="https://www.h2hub.or.kr/assets/jqgrid/js/retrieveGrid.js"></script>
+
+<style>
+    #result{
+        font-family: "Noto Sans KR", sans-serif !important;
+    }
+    #result > tbody > tr > td{
+        font-size: 1.4rem !important;
+    }
+    #content .option_wrap > table > tbody > tr > td {
+        padding: 0.5rem !important;
+    }
+    .form-control{
+        height: 35px !important;
+    }
+    .option_wrap{
+        padding: 1rem !important;
+    }
+    #noData{
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.3rem;
+        height: 100%;
+        display: block;
+        border: 1px solid #a6c9e2;
+        width: 985px;
+    }
+
+    #excel_download {
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 12rem;
+        height: 35px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+        color: #fff;
+        background-color: #0066b3;
+        border: 1px solid #0066b3;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #depth3{
+        width: 11% !important;
+    }
+    #depth4{
+        width: 19% !important;
+    }
+    @media (max-width: 991.98px){
+        #depth3, #depth4{
+            width:49.5% !important;
+        }
+    }
+    /*.ui-jqgrid .ui-jqgrid-bdiv {*/
+    /*    overflow-y: scroll !important;*/
+    /*}*/
+</style>
+</head>
+<body>
+    <!-- sub_content -->
+        <div class="sub_content">
+            <!-- 서브 타이틀 -->
+            <div class="sub_title">
+                <h3>통계정보</h3>
+                <div class="loc">
+                    <p><i class="xi-home"></i> <i class="xi-angle-right"></i> <span>통계정보</span></p>
+                </div>
+            </div>
+            <!-- //서브 타이틀 -->
+            <!-- 콘텐츠 -->
+            <div id="content" class="statistic_1">
+                <div class="option_wrap">
+                    <table>
+                        <colgroup>
+                            <col width="8%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">선택</th>
+                            <td>
+                                <select name="" id="depth1" class="form-control">
+                                    <option value="1" selected>선택</option>
+                                    <option value="100">생산</option>
+                                    <option value="200">유통</option>
+                                    <option value="300">활용</option>
+                                    <option value="400">산업생태계</option>
+                                </select>
+                                <select name="" id="depth2" class="form-control">
+                                    <option value="">선택</option>
+                                </select>
+                                <select name="" id="depth3" class="form-control">
+                                    <option value="">선택</option>
+                                    <option value="SIDO_NM">지역</option>
+                                    <option value="OPER_INSTT">운영기관</option>
+                                    <option value="STN_TY">용도</option>
+                                    <option value="CNSTC_ENTRPS">구축업체</option>
+                                </select>
+                                <select name="" id="depth4" class="form-control">
+                                    <option value="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주기</th>
+                            <td>
+                                <input type="text" class="form-control" id="SPC" value="년 단위" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">기간</th>
+                            <td>
+                                <div class="d-flex">
+                                    <p class="datepicker"><input type="text" class="form-control" id="startDate"></p>
+                                    <span class="dash"><i class="xi-minus"></i></span>
+                                    <p class="datepicker"><input type="text" class="form-control" id="endDate"></p>
+                                    <button style="height: 35px !important;" class="btn-blue" onclick="search()">검색</button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <section style="margin-top: 15px;">
+                    <div class="surveyYmd" style="position: relative; height: 30px;">
+                        <h5 id="surveyYmd" style="display: inline-block; "><%-- 조사 시점 : 2021. 12 --%></h5>
+                        <button onclick="download();" id="excel_download" class="btn-blue">엑셀다운로드</button>
+                    </div>
+
+        <%--                <%@include file="type/TS_STATS001_CHART.jsp"%>--%>
+        <%--                <%@include file="type/TS_STATS002_CHART.jsp"%>--%>
+
+                        <div id="stat-body" class="table_ui" style="margin-bottom: 15px !important;">
+                <%--단위 집어넣을곳--%>          <div style="position: relative; left: 25px;top:20px;" id="chart_dan"></div>
+                            <div>
+                            <h2><span id="TERM_DESC"> </span> <span id="STATS_NM"></span></h2>
+                            <div class="text-right" id="unit"></div>
+
+                            <div id="stat-chart" class="tb_1"></div>
+
+                            <div id="commingSoon" style="display: none; position: relative;">
+                                <%@include file="/WEB-INF/jsp/cmm/commingSoon.jsp"%>
+
+                            </div>
+
+                                <div id="source"> 출처 : 수소융합얼라이언스</div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section>
+
+                    <div>
+                        <div style="position: relative; text-align: right;" id="grid_dan"></div>
+                        <%@ include file="type/include/top.jsp" %>
+                        <table id="result"></table>
+                    </div>
+                </section>
+            </div>
+            <!-- //콘텐츠 -->
+        </div>
+    <!-- sub_content -->
+
+    <script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.Cmmn.js" ></script>
+    <script type="text/javascript" src="https://www.h2hub.or.kr/assets/js/stat/stat.Topic.js" ></script>
+    <script type="text/javascript">
+        stat.Cmmn.CONTEXTPATH = "${pageContext.request.contextPath}";
+        new window.stat.Topic();
+
+        const ctgrySn = "${ctgrySn}";
+        let param={
+            ctgry: $("#depth3").val(),
+            value: $("#depth4").val(),
+        };
+
+        $("#startDate").val(oneYearAgo());
+        $("#endDate").val(today());
+
+        $("#depth3").html(depth_ctgry(ctgrySn));
+
+        //페이지 첫 로드 시 CTGRY_SN 값으로 그래프 출력
+        getStatData(ctgrySn, oneYearAgo(),today(), param);
+                console.log(param);
+        if(!(ctgrySn==='200300' || ctgrySn==='400100')){
+            $("#depth3").css('display','none');
+            $("#depth4").css('display','none');
+        }
+
+        var ctgryList ="";
+        var optionList ="";
+
+        renderUnit(ctgrySn);
+
+        //페이지 첫 로드시 검색박스 선택
+        for(i of menuByLvl){
+            if(i.ctgryId ==="${ctgrySn}".slice(0,3)) ctgryList += '<option value="'+i.ctgryId+'" selected>'+i.ctgryNm+'</option>';
+            else ctgryList += '<option value="'+i.ctgryId+'">'+i.ctgryNm+'</option>';
+        }
+
+        for(i of menuByLv2){
+            if(i.ctgrySn.slice(0,3) ==="${ctgrySn}".slice(0,3)) {
+                if(i.ctgrySn==="${ctgrySn}") {
+                    $("#SPC").val(i.period);
+                    optionList += '<option value="'+i.ctgrySn+'" id="'+i.id+'" selected>'+i.ctgryNm+'</option>';
+                }else optionList += '<option value="'+i.ctgrySn+'" id="'+i.id+'">'+i.ctgryNm+'</option>';
+            }
+        }
+
+        $("#depth1").html(ctgryList);
+        $("#depth2").html(optionList);
+
+    //SPC001 1개월 주기
+    //SPC002 분기
+    //SPC003 1년주기
+        $("#depth1").on("change",function(){
+            if($("#depth1").val()==="100") {
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="100100" id="SPC003">국내 수소 생산량(생산방식별)</option>' +
+                    '<option value="100200" id="SPC003">국내 수소 생산량(권역별)</option>' +
+                    '<option value="100300" id="SPC003">국내 수소 생산량(업종별)</option>' +
+                    '<option value="100400" id="SPC003">국내 수소 생산기지 현황</option>'
+                $("#depth2").html(optionList);
+
+            }
+            else if ($("#depth1").val()==="200"){
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="200100" id="SPC003">국내 운송설비 현황</option>' +
+                    '<option value="200200" id="SPC003">국내 수소 공급량(판매처 업종별)</option>'+
+                    '<option value="200300" id="SPC001">국내 상업용 수소충전소 현황</option>' +
+                    '<option value="200400" id="SPC001">주요국 수소충전소 구축 현황</option>'
+                $("#depth2").html(optionList);
+            }
+            else if ($("#depth1").val()==="300"){
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="300100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+                    '<option value="300200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+                    '<option value="300300" id="SPC003">국내 수소차 수출 현황</option>' +
+                    '<option value="300400" id="SPC003">국내 수소연료전지 보급 현황</option>' +
+                    '<option value="300500" id="SPC003">주요국 수소연료전지 보급 현황</option>'
+                $("#depth2").html(optionList);
+            }
+            else if ($("#depth1").val()==="400"){
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="400100" id="SPC001">국내 수소전문기업 현황</option>' +
+                    '<option value="400200" id="SPC003">국내 수소산업 사업체 현황</option>'
+                $("#depth2").html(optionList);
+            }
+            else if ($("#depth1").val()==="500"){
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="500100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+                    '<option value="500200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+                    '<option value="500300" id="SPC003">국내 수소차 수출 현황</option>'
+                $("#depth2").html(optionList);
+            }
+            else if ($("#depth1").val()==="600"){
+                var optionList = '<option selected>선택</option>'+
+                    '<option value="500100" id="SPC001">국내 수소모빌리티 보급 현황</option>' +
+                    '<option value="500200" id="SPC001">주요국 수소모빌리티 보급 현황</option>'+
+                    '<option value="500300" id="SPC003">국내 수소차 수출 현황</option>'
+                    '<option value="600100" id="SPC003">국내 수소연료전지 보급 현황</option>' +
+                    '<option value="600200" id="SPC003">주요국 수소연료전지 보급 현황</option>'
+                $("#depth2").html(optionList);
+            }else if ($("#depth1").val()==="1"){
+                var optionList = '<option value="">선택</option>'
+                $("#depth2").html(optionList);
+            }
+        });
+
+        $("#depth2").on("change",function(){
+            var id = $("#depth2 option:selected").attr("id");
+            // alert(id);
+            $("#depth3").html(depth_ctgry($(this).val()));
+            let period = "";
+            switch (id) {
+
+                case "SPC001":
+                    period = "개월 단위";
+                    break;
+                case "SPC002":
+                    period = "분기 단위";
+                    break;
+                case "SPC003":
+                    period = "년 단위";
+                    break;
+            }//switch end
+            $("#SPC").val(period);
+            if($(this).val()==='200300' || $(this).val()==='400100'){
+                $("#depth3").css('display','inline-block');
+                $("#depth4").css('display','inline-block');
+
+            }else{
+                $("#depth3").css('display','none');
+                $("#depth4").css('display','none');
+
+            }
+
+        });
+    //depth4_fndnYr
+        $("#depth3").on("change",function(){
+            if($(this).val()!==""){
+                $("#depth4").html(depth4_html($(this).val()));
+            }else{
+                $("#depth4").html('<option value="" selected>선택</option>');
+            }
+        })
+
+
+
+        function search(){
+
+            var ctgrySn = $("#depth2").val();
+            var pstgBgngYmd = $("#startDate").val();
+            var pstgEndYmd =   $("#endDate").val();
+            var param = {
+                ctgry: $("#depth3").val(),
+                value: $("#depth4").val(),
+            };
+            if(!pstgBgngYmd || !pstgEndYmd){
+                alert("검색할 기간을 선택해 주세요.");
+                return false;
+            }
+
+            getStatData(ctgrySn, pstgBgngYmd, pstgEndYmd, param);
+            renderUnit(ctgrySn);
+        }
+
+        function getStatData(ctgrySn, startDate, endDate, param){
+            $.ajax({
+                type:"GET",
+                url: stat.Cmmn.CONTEXTPATH+"/stat/view/gridLoad.do",
+                dataType: "json",
+                async: false,
+                data:{
+                    "ctgrySn" : ctgrySn,
+                    "pstgBgngYmd" : startDate,
+                    "pstgEndYmd" : endDate
+                },
+                success : function (result){
+                    drawChart(ctgrySn,param,result.data);
+                    GridControl.clearGridData();
+                    drawGrid(ctgrySn,param,result.data);
+
+                }
+            });
+        }
+
+        function download(){
+            let url = 'ctgrySn='+ $("#depth2").val()+'&pstgBgngYmd='+$("#startDate").val()+
+                    '&pstgEndYmd='+$("#endDate").val()+'&searchKey='+$("#depth3").val()+'&searchValue='+$("#depth4").val();
+
+            window.open(CONTEXT_PATH + "/stat/excelDownload.do?"+url);
+        }
+
+        function today(){
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+            var day = ('0' + today.getDate()).slice(-2);
+            var dateString = year + '-' + month  + '-' + day;
+            return dateString;
+        }
+
+        function oneYearAgo(){
+            var today = new Date();
+            var year = today.getFullYear()-1;
+            var month = ('0' + (today.getMonth() + 1)).slice(-2);
+            var day = ('0' + today.getDate()).slice(-2);
+            var dateString = year + '-' + month  + '-' + day;
+            return dateString;
+        }
+
+        function renderUnit(ctgrySn) {
+            const surveyYmdTag = document.getElementById("surveyYmd");
+            const chartDanTag = document.getElementById("chart_dan");
+            const gridDanTag = document.getElementById("grid_dan");
+            const sourceTag = document.getElementById("source");
+            sourceTag.style.display="block";
+
+            switch (ctgrySn){
+                case "100100":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : ton)";
+                    gridDanTag.innerHTML ="(단위 : ton)";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "100200":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : ton)";
+                    gridDanTag.innerHTML ="(단위 : ton)";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "100300":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : ton)";
+                    gridDanTag.innerHTML ="(단위 : ton)";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "200100":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : 대)";
+                    gridDanTag.innerHTML ="(단위 : km, 대)";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "200200":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : ton)";
+                    gridDanTag.innerHTML ="(단위 : ton)";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "200300":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : 충전소 수)";
+                    gridDanTag.innerHTML ="";
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "200400":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : 기)";
+                    gridDanTag.innerHTML ="(단위 : 기)";
+                    sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+                    break;
+                case "100400":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML ="(단위 : 충전소 수)";
+                    gridDanTag.innerHTML ="";
+                    sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+                    break;
+                case "300100":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : 대)"
+                    gridDanTag.innerHTML ="(단위 : 대)"
+                    sourceTag.innerHTML = "출처 : 국토교통부";
+                    break;
+                case "300200":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : 대)"
+                    gridDanTag.innerHTML ="(단위 : 대)"
+                    sourceTag.innerHTML = "출처 : 국토교통부";
+                    break;
+                case "300300":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : 대)"
+                    gridDanTag.innerHTML ="(단위 : 대)"
+                    sourceTag.innerHTML = "출처 : 산업통상자원부";
+                    break;
+                case "300400":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : MW)"
+                    gridDanTag.innerHTML = "(단위 : MW)"
+                    sourceTag.innerHTML = "출처 : 한국에너지공단";
+                    break;
+                case "300500":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : MW)"
+                    gridDanTag.innerHTML = "(단위 : MW)"
+                    sourceTag.innerHTML = "출처 : 한국(한국에너지공단),일본(코제네재단),미국(에너지부)";
+                    break;
+                case "400100":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2022. 02";
+                    chartDanTag.innerHTML = "(단위 : 전문기업 수)"
+                    gridDanTag.innerHTML = ""
+                    sourceTag.innerHTML = "출처 : 수소융합얼라이언스 ";
+                    break;
+                case "400200":
+                    surveyYmdTag.innerHTML = "조사 시점 : 2021. 12";
+                    chartDanTag.innerHTML = "(단위 : %)"
+                    gridDanTag.innerHTML = "(단위 : %, 백만원, 명)"
+                    sourceTag.innerHTML = "출처 : 수소융합얼라이언스";
+                    break;
+                default:
+                    surveyYmdTag.innerHTML = "";
+                    chartDanTag.innerHTML = "";
+                    gridDanTag.innerHTML ="";
+                    sourceTag.style.display="none";
+                    break;
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
