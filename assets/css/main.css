@@ -36,6 +36,7 @@
   position: absolute;
   font-size: 3.9rem;
   color: #fff;
+  width:480px;
   top: 50%;
   left: 75%;
   transform: translate(-75%, -50%);
@@ -59,11 +60,11 @@
 .page_inner {
   position: absolute;
   max-width: 1400px;
-  width: 100%;
+  width: 480px;
   height: 250px;
   top: 50%;
   left: 75%;
-  transform: translate(-21.9%, -50%);
+  transform: translate(-75%, -50%);
   z-index: 2;
 }
 .page_inner .pagination_fraction {
@@ -753,6 +754,7 @@
 }
 /* hover */
 @media screen and (min-width: 1024px) {
+  
   .elem-statistics .elem-statistics__cont.elem-statistics__cont-hover {
     width: 610px;
     transition: width 0.5s ease-in-out;
@@ -812,6 +814,16 @@
 }
 
 /* responsive */
+@media screen and (max-width: 1800px) {
+  .suso_main1 .box {
+    left: 85%;
+    transform: translate(-85%, -50%);
+  }
+  .page_inner {
+    left: 85%;
+    transform: translate(-85%, -50%);
+  }
+}
 @media screen and (max-width: 1400px) {
   .elem-statistics__inner,
   .elem-statistics__inner.layout-full {
@@ -821,14 +833,15 @@
     width: 25%;
   }
   .suso_main1 .box {
-    left: 6rem;
+    left: 90%;
+    transform: translate(-90%, -50%);
   }
   .page_inner {
-    left: 6rem;
-    transform: translateY(-50%);
+    left: 90%;
+    transform: translate(-90%, -50%);
   }
   .section.first .swiper-slide {
-    background-position: 50% center !important;
+    background-position: 0 center !important;
   }
   .secondSwiper.swiper {
     overflow: hidden;
@@ -845,7 +858,11 @@
     padding: 1rem;
   }
 }
+
 @media screen and (max-width: 1200px) {
+  .section.first .swiper-slide {
+    background-position: 32% center !important;
+  }
   .mainTitle p {
     font-size: 5rem;
   }
@@ -926,6 +943,12 @@
 	}
   .headerBottom h1 {
     height: 9rem;
+  }
+  .page_inner {
+    width: 400px;
+  }
+  .suso_main1 .box {
+    width: 400px;
   }
   .elem-statistics__inner,
   .elem-statistics__inner.layout-full {
@@ -1318,6 +1341,9 @@
 	.mMenu{display:none;}
 }
 @media screen and (max-width: 750px) {
+  .section.first .swiper-slide {
+    background-position: 21% center !important;
+  }
   .header {
     height: 6.8rem;
   }
@@ -1362,17 +1388,15 @@
     font-size: 3rem;
   }
   .suso_main1 .box {
-    font-size: 1.8rem;
-    left: 2rem;
-    top: 42.5%;
-    transform: translateY(-42.5%);
+    width:300px;
+    font-size: 3rem;
   }
   .suso_main1 .box_txt p {
     margin-bottom: 0.8rem;
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   .page_inner {
-    left: 2rem;
+    width:300px;
   }
   .page_inner .pagination_fraction {
     font-size: 1.8rem;
@@ -1392,7 +1416,6 @@
     font-size: 1.8rem;
   }
   .page_inner {
-    top: 43%;
     height: 20rem;
   }
   .mainTitle p {
@@ -1576,11 +1599,46 @@
 	}
 }
 
+@media screen and (max-width: 750px) {
+  .section.first .swiper-slide {
+    background-position: 21% 0 !important;
+  }
+  .section.first .swiper-slide.first_slide {
+    background: url(../img/main/main_Bg1_m.png) no-repeat;
+    background-size: cover;
+  }
+  .section.first .swiper-slide.second_slide {
+    background: url(../img/main/main_Bg2_m.png) no-repeat;
+    background-size: cover;
+  }
+  .section.first .swiper-slide.third_slide {
+    background: url(../img/main/main_Bg3_m.png) no-repeat;
+    background-size: cover;
+  }
+  .page_inner {
+    top: 30%;
+  }
+  .suso_main1 .box {
+    top: 30%;
+  }
+}
+
 @media screen and (max-width: 450px) {
+  .suso_main1 .box {
+    width: 260px;
+  }
+  .page_inner {
+    left: 90.5%;
+    width: 260px;
+    height: 18.5rem;
+  }
   .tab_wrap {
     height: 91rem;
   }
-  .elem-familySite__item:nth-child(-n + 3) img{
+  .elem-familySite__item img{
 		width:70%
-	}
+  }
+  .elem-familySite__item:nth-child(-n + 3) img{
+		width:100%
+  }
 }

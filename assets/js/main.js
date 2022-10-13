@@ -43,10 +43,10 @@ $(document).ready(function () {
 function firstSlide() {
   var firstswiper = new Swiper('.suso_main1 .mySwiper', {
     effect: 'fade',
-	autoplay: {
-	  delay: 2500,
-	  disableOnInteraction: false,
-	},
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.suso_main1 .swiper-pagination',
       type: 'fraction',
